@@ -1,4 +1,5 @@
 package com.bcopstein.ExercicioRefatoracaoBanco;
+
 public class Conta {
 	public final int SILVER = 0;
 	public final int GOLD = 1;
@@ -19,14 +20,14 @@ public class Conta {
 		saldo = 0.0;
 		status = SILVER;
 	}
-	
-	public Conta(int umNumero, String umNome,double umSaldo, int umStatus) {
+
+	public Conta(int umNumero, String umNome, double umSaldo, int umStatus) {
 		numero = umNumero;
 		correntista = umNome;
 		saldo = umSaldo;
 		status = umStatus;
 	}
-	
+
 	public double getSaldo() {
 		return saldo;
 	}
@@ -34,34 +35,42 @@ public class Conta {
 	public Integer getNumero() {
 		return numero;
 	}
-	
+
 	public String getCorrentista() {
 		return correntista;
 	}
-	
+
 	public int getStatus() {
 		return status;
 	}
-	
+
 	public String getStrStatus() {
-		switch(status) {
-		case 0:  return "Silver";
-		case 1:  return "Gold";
-		case 2:  return "Platinum";
-		default: return "none";
+		switch (status) {
+		case 0:
+			return "Silver";
+		case 1:
+			return "Gold";
+		case 2:
+			return "Platinum";
+		default:
+			return "none";
 
 		}
 	}
-	
+
 	public double getLimRetiradaDiaria() {
-		switch(status) {
-		case 0:  return 5000.0;
-		case 1:  return 50000.0;
-		case 2:  return 500000.0;
-		default: return 0.0;
+		switch (status) {
+		case 0:
+			return 10000.0;
+		case 1:
+			return 100000.0;
+		case 2:
+			return 500000.0;
+		default:
+			return 0.0;
 		}
 	}
-	
+
 	public void deposito(double valor) {
 		if (status == SILVER) {
 			saldo += valor;
