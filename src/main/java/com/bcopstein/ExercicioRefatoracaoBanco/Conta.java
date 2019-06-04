@@ -1,5 +1,10 @@
 package com.bcopstein.ExercicioRefatoracaoBanco;
 
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.List;
+
 public class Conta {
 	public final int SILVER = 0;
 	public final int GOLD = 1;
@@ -13,6 +18,7 @@ public class Conta {
 	private String correntista;
 	private double saldo;
 	private int status;
+	
 
 	public Conta(int umNumero, String umNome) {
 		numero = umNumero;
@@ -103,6 +109,8 @@ public class Conta {
 			}
 		}
 	}
+
+	
 
 	@Override
 	public String toString() {
