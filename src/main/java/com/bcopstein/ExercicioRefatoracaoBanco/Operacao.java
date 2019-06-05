@@ -68,6 +68,8 @@ public class Operacao {
 	public int getTipoOperacao() {
 		return tipoOperacao;
 	}
+
+	
     
 	@Override
 	public String toString() {
